@@ -41,15 +41,6 @@ const getAudioAlternative = async (word) => {
     }
     const finalAudioUrl = `${audioUrl}${folder}${audioStr}.wav`;
     return finalAudioUrl;
-    // const finalAudioUrl = `${audioUrl}${folder}${audioStr}.wav`;
-    // const audio = new Audio(finalAudioUrl);
-    // return audio;
-    
-    // https://media.merriam-webster.com/soundc11/number/3d000001.wav
-    // if audio begins with "bix", the subdirectory should be "bix",
-    // if audio begins with "gg", the subdirectory should be "gg",
-    // if audio begins with a number or punctuation (eg, "_"), the subdirectory should be "number",
-    // otherwise, the subdirectory is equal to the first letter of audio.
   } catch(e) {
     console.log(e.message);
   }

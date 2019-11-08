@@ -1,6 +1,6 @@
 const getLeaderboard = async () => {
   try {
-    const rawResponse = await fetch("http://localhost:5000/leaderboard");
+    const rawResponse = await fetch("/leaderboard");
     const response = await rawResponse.json();
     return response.leaderboard;
   } catch(e) {
@@ -10,7 +10,7 @@ const getLeaderboard = async () => {
 
 const getLeaderboardForCurrentDifficulty = async (difficulty) => {
   try {
-    const rawResponse = await fetch(`http://localhost:5000/leaderboard/${difficulty}`);
+    const rawResponse = await fetch(`/leaderboard/${difficulty}`);
     const response = await rawResponse.json();
     return response.leaderboard;
   } catch(e) {
@@ -33,7 +33,7 @@ const postToLeaderboard = async (name, points, difficulty, idToDelete) => {
     })
   };
   try {
-    const rawResponse = await fetch("http://localhost:3002/leaderboard", options);
+    const rawResponse = await fetch("/leaderboard", options);
     const response = await rawResponse.json();
     return response;
   } catch(e) {
