@@ -8,7 +8,6 @@ const getWord = async () => {
     const url = `https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&&minDictionaryCount=10&&api_key=${wordnikKey}`;
     const rawResponse = await fetch(url);
     const response = await rawResponse.json();
-    console.log(response)
     return response.word;
   } catch(e) {
     console.log(e.message);
@@ -17,7 +16,6 @@ const getWord = async () => {
 
 const getAudioAlternative = async (word) => {
   try {
-    console.log(process.env)
     const rawResponse = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${merriamKey}`);
     const response = await rawResponse.json();
     const audioUrl = "https://media.merriam-webster.com/soundc11/";
