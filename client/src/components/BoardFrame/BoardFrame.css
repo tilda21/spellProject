@@ -1,0 +1,226 @@
+/* title */
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+  color: black;
+  padding: 30px;
+}
+
+/* topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60vw;
+  height: 20vh;
+  margin: auto;
+}
+
+.topbar-right {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 25px;
+}
+
+.lifes {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.points {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lifes-points-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lifes-points-container p {
+  margin: 3px 2px;
+}
+
+#points {
+  font-weight: bold;
+}
+
+#lifes {
+  font-weight: bold;
+}
+
+/* animate points and lifes */
+.animatePoints {
+  color: green;
+}
+
+.animateLifes {
+  color: red;
+}
+
+.scale-up-center {
+	animation: scale-up-center 0.7s ease-in-out alternate backwards;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* play again */
+figcaption {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+img {
+  cursor: pointer;
+}
+
+/* input */
+.wordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.wordForm button {
+  border: none;    
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);  
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px;
+  width: 50%;
+}
+
+.wordForm button:hover {
+  background-color: rgba(207, 61, 61, 0.733);
+}
+
+.wordForm input {
+  width: 50%;
+  border: solid 2px red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 50px;
+  background-color: transparent;
+}
+
+.wordForm input:focus {
+  outline: none;
+}
+
+.exit {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 60vw;
+  margin: 80px auto 0 auto;
+}
+
+.exit button {
+  border: none;    
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);  
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.exit button:hover {
+  background-color: rgba(207, 61, 61, 0.733);
+}
+
+/* media queries   */
+@media screen and (max-width: 606px) {
+  h1 {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90vw;
+    height: 10vh;
+    margin: auto;
+  }
+
+  .topbar-right {
+    font-size: 18px;
+  }
+
+  main img {
+    height: 41px;
+    width: 41px;
+  }
+
+  .wordForm input {
+    width: 80%;
+    font-size: 30px;
+    background-color: transparent;
+  }
+
+  figure {
+    margin-bottom: 0;
+  }
+
+  .wordForm button {
+    padding: 5px;
+    font-size: 18px;
+    margin: 20px;
+    width: 80%;
+  }
+
+  .exit button {
+    padding: 5px 10px;
+    font-size: 18px;
+    margin: 20px;
+  }
+
+  .exit {
+    max-width: 90vw;
+    margin: 30vh auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  h1 {
+    font-size: 35px;
+    padding-top: 5px;
+  }
+
+  .exit button {
+    margin-bottom: 5px;
+  }
+
+  .exit {
+    margin: 25vh auto 0 auto;
+  }
+}
