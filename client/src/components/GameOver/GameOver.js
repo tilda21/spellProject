@@ -34,7 +34,7 @@ class GameOver extends React.Component {
       <>
         <h1>Game Over</h1>
 
-        {(leaderboardForCurrentDifficulty.length < 5 || points > leaderboardForCurrentDifficulty[lastIdx].points) ?
+        {(leaderboardForCurrentDifficulty.length < 5 || points > leaderboardForCurrentDifficulty[lastIdx].points) && points > 0 ?
           <LeaderForm difficulty={this.difficulty[difficulty]} points={points} idToDelete={idToDelete}/>
           :
           <h4 id="gameOverMessage" className="m-5">{points > 0 ? "Good joob!" : "Are your speakers on?!"} You made <span>{points}</span> points, keep practicing...</h4>
