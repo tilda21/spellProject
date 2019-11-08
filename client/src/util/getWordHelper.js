@@ -17,6 +17,7 @@ const getWord = async () => {
 
 const getAudioAlternative = async (word) => {
   try {
+    console.log(process.env)
     const rawResponse = await fetch(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${merriamKey}`);
     const response = await rawResponse.json();
     const audioUrl = "https://media.merriam-webster.com/soundc11/";
