@@ -21,8 +21,6 @@ const getAudioAlternative = async (word) => {
     const audioUrl = "https://media.merriam-webster.com/soundc11/";
     // get the word as written in the API 
     const wordFromApi = response[0].hwi.hw.replace(/\*/g, "");
-    // console.log(response[0].hwi);
-    console.log(wordFromApi);
     // check if the properties exit and random word equals word from API
     if (!response[0].hwi || !response[0].hwi.prs || wordFromApi !== word) {
       return undefined;

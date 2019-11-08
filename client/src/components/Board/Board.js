@@ -7,8 +7,6 @@ import { withRouter } from "react-router-dom";
 
 const randomWord = require("random-words");
 
-// const wordArr = ["test", "wild", "code", "school", "programming", "dentist", "expect", "nice", "life", "great"]; 
-
 class Board extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +66,6 @@ class Board extends React.Component {
   getWordFn = async () => {
     if (this.state.lifes > 0) {
       let word = randomWord();
-      console.log(word);
       let audioUrl = await getAudioAlternative(word);
       // if there's no audio for the given word, query api for word and audio
       while (!audioUrl) {
@@ -76,10 +73,6 @@ class Board extends React.Component {
         word = await getWord();
         audioUrl = await getAudioAlternative(word);
       }
-
-      // const word = wordArr[Math.floor(Math.random() * wordArr.length)];
-      // const audioUrl = await getAudioAlternative(word);
-      
       this.setState({
         audioUrl: audioUrl, 
         word: word,
