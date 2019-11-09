@@ -51,10 +51,12 @@ h1 {
 
 #points {
   font-weight: bold;
+  transition: color .7s ease-in-out;
 }
 
 #lifes {
   font-weight: bold;
+  transition: color .7s ease-in-out;
 }
 
 /* animate points and lifes */

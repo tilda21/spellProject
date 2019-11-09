@@ -3,6 +3,16 @@
   height: 40px;
   width: 40px;
   text-align: center;
+  animation: slidein 0.7s forwards;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #countdown-number {

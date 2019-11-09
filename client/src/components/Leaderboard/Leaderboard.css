@@ -1,5 +1,5 @@
 #leaderTable {
-  height: 57vh;
+  max-height: 57vh;
   overflow-y: scroll;
 }
 

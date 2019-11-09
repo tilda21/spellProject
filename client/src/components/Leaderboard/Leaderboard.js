@@ -59,7 +59,7 @@ class Leaderboard extends React.Component {
         <div id="leaderTable" className="container mt-2 py-4 pl-5 pr-5 mb-5">
           <table className="table table-sm table-hover">
             <thead>
-              <tr><th colSpan="3"><h4>Leaderboard</h4></th></tr>
+              <tr><th colSpan="3"><h5>Leaderboard</h5></th></tr>
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Difficulty<img id="difficulty" onClick={this.sortBy} src={downArrow} alt=""/></th>
