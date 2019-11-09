@@ -19,7 +19,7 @@ class Timer extends React.Component {
         clearInterval(this.interval);
         this.props.wordSubmit();
       }
-    }, 1000);
+    }, 1500);
   }
 
   componentWillUnmount() {

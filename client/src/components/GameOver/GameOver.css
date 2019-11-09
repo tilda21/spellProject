@@ -63,6 +63,7 @@ table.table > tbody > tr > td {
   #gameOverTable {
     padding-left: 5px!important;
     padding-right: 5px!important;
+    width: 97vw;
   }
 
   .playAgainButton {
