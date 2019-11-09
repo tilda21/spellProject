@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import StartMenu from "../StartMenu/StartMenu";
 import Board from "../Board/Board";
-import GameOver from "../GameOver/GameOver";
 import "./App.css";
 import LeaderForm from "../LeaderForm/LeaderForm";
 
@@ -42,15 +41,10 @@ class App extends React.Component {
             <Route exact path="/board" render={() => 
               <Board />
             }/>
-
-            <Route exact path="/gameover" render={() => 
-              <GameOver />
-            }/>
       
-          <LeaderForm />
+            <LeaderForm />
+            
           </Switch>
-  
-
         </div>
       </BrowserRouter>
     );

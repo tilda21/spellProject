@@ -19,7 +19,7 @@ class Timer extends React.Component {
         clearInterval(this.interval);
         this.props.wordSubmit();
       }
-    }, 1500);
+    }, 1000);
   }
 
   componentWillUnmount() {
@@ -28,20 +28,12 @@ class Timer extends React.Component {
 
   render() {
     return (
-      <>
-        {/* if audio is loaded in parent component */}
-        {this.props.audioUrl ?
-          <div id="countdown">
-            <div id="countdown-number">{this.state.seconds}</div>
-            <svg>
-              <circle className={this.props.difficulty} r="18" cx="20" cy="20"></circle>
-            </svg>
-          </div>
-          :
-          <div id="countdown">
-            <div id="countdown-number"></div>
-          </div>}
-      </>
+      <div id="countdown">
+        <div id="countdown-number">{this.state.seconds}</div>
+        <svg>
+          <circle className={this.props.difficulty} r="18" cx="20" cy="20"></circle>
+        </svg>
+      </div>
     );
   }
 }

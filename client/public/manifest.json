@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Spelling Masta",
+  "name": "Spelling App - Play and get yourself into the top-5",
   "icons": [
     {
       "src": "favicon.ico",

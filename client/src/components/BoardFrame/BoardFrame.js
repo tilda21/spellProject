@@ -43,19 +43,27 @@ class BoardFrame extends React.Component {
         {audioUrl && audioUrl.length > 0 && <audio src={audioUrl} autoPlay/>}
         <h1>Spelling Masta</h1>
         <div className="topbar">
-          <Timer wordSubmit={wordSubmit} audioUrl={audioUrl} difficulty={difficulty} seconds={seconds} />
+          {/* only render Timer if audioUrl exists */}
+          {audioUrl && audioUrl.length > 0 
+            ?
+            <Timer wordSubmit={wordSubmit} 
+              audioUrl={audioUrl} 
+              difficulty={difficulty} 
+              seconds={seconds} />
+            :
+            // empty div to keep .topbar-right in place
+            <div></div>
+          }
           <div className="topbar-right">
             <div className="lifes-points-container">
               <p>Lifes:</p> 
               <p id="lifes" className={animateLifes === "animate" ? "scale-up-center animateLifes" : ""}>
-                {/* {this.props.animateLifes === "animate" ? ` -${lifes}` : ` ${lifes}`}  */}
                 {lifes}
               </p>
             </div>
             <div className="lifes-points-container">
               <p>Points:</p> 
               <p id="points" className={animatePoints === "animate" ? "scale-up-center animatePoints" : ""}>
-                {/* {this.props.animatePoints === "animate" ? ` +${points}` : ` ${points}`} */}
                 {points}
               </p>
             </div>
