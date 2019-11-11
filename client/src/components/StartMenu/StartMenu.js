@@ -20,6 +20,27 @@ class StartMenu extends React.Component {
   handleDifficultyClick = (e) => {
     this.props.handleDifficultyChange(e.target.innerHTML);
   };
+  handleColorOnClick = (e) => {
+    this.props.handleClick(e.target.value);
+    //console.log(e.target)
+  };
+
+  renderButtons = () => {
+    const createButtons = Object.keys(this.props.gradients).map ( (key) => {
+      //console.log(this.props.gradients[key])
+      let backgroundVal = {
+        background: this.props.gradients[key]
+      };
+      //console.log(<li key= {value} className='colorbutton' onClick={this.handleColorOnClick}><button value={ value } style={ backgroundVal }  className= 'buttonstyle' ></button></li>) 
+      return (
+          <li key= {key} className='colorbutton' onClick={this.handleColorOnClick}>
+            <button value={ this.props.gradients[key] } style={ backgroundVal }  className= 'buttonstyle' >{ key }</button>
+          </li>
+      );
+    })
+
+    return  createButtons
+  };
   
   render() {
     const { difficulty, seconds } = this.props;
@@ -27,6 +48,11 @@ class StartMenu extends React.Component {
 
     return (
       <>
+        <div className='colorbar'>
+          <ul className='colorlist'>
+            { this.renderButtons() }
+          </ul>
+        </div>
         <h1>Spelling Masta</h1>
         <ul id="difficultyList">
           <li onClick={this.handleDifficultyClick} className={difficulty === "Newbie" ? "active" : ""}>Newbie</li>
@@ -35,6 +61,9 @@ class StartMenu extends React.Component {
         </ul>
         <Link to={{ pathname: '/board', state: { difficulty: difficulty.toLowerCase(), seconds: seconds } }}><button className="startButton">Start</button></Link>
         {leaderboard.length > 0 && <Leaderboard leaderboard={leaderboard}/>}
+        <div>
+          <Link to= '/wordofday' className='noUnderline' ><h3 className='DayWord'>Word Of The Day</h3></Link>
+        </div>
       </>
     );
   }

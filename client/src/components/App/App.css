@@ -9,3 +9,36 @@ body {
   height: 100vh;
 }
 
+.backcolor {
+  background: linear-gradient(0deg, rgba(175,66,8,0.8498787183440133) 28%, rgba(226,156,37,1) 64%, rgba(60,114,30,0.5296539992428897) 98%);
+}
+
+button.buttonstyle {
+  border-radius: 5px;
+  /*padding: 20px 52px 20px 52px;
+ */padding: 10px;
+  border: whitesmoke;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+h1 {
+  color: black;
+  margin: 0px;
+}
+
+div.colorbar {
+  display: flex;
+  text-align: center;
+/*   background: #414345;
+ */}
+ul.colorlist {
+  margin: auto;
+  display: flex;
+  text-align: center;
+  padding: 0px;
+}
+li.colorbutton {
+  list-style-type: none;
+  padding: 20px;
+}
