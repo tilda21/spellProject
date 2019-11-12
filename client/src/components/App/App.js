@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import StartMenu from "../StartMenu/StartMenu";
 import Board from "../Board/Board";
 import "./App.css";
-import LeaderForm from "../LeaderForm/LeaderForm";
 import WordOfDay from "../WordOfDay/WordOfDay";
 
 
@@ -64,8 +63,6 @@ class App extends React.Component {
             <Route exact path="/board" render={() => 
               <Board />
             }/>
-      
-            <LeaderForm />
 
             <Route exact path="/wordofday" render={() => 
               <WordOfDay />
