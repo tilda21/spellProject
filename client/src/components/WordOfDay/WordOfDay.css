@@ -1,28 +1,64 @@
+@font-face {
+    font-family: "njnastrike";
+    src: url('../../fonts/Ninjastrike-jBDM.ttf')  format("truetype");
+  }
+
+div.App {
+    height: 100vh;
+}
+
 .title {
     font-size: 50px;
     color: green;
     padding-top: 10px;
+    font-family: njnastrike;
 }
 
-.word {
+h1.word {
     font-size: 80px;
+    padding: 15px;
 }
 
-.text {
+h2.text {
     font-size: 40px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 60px;
 }
 
 .origin {
-    font-size: 30px;
-    color: green;
-    padding-top: 30px;
+    font-size: 35px;
+    color: black;
+    padding-top: 10px;
+    font-family: njnastrike;
 }
 
 .originText {
+    font-size: 30px;
     padding: 0px 20px 0px 20px;
 }
 
-.date {
+h3.date {
     padding: 30px 0px 0px 0px;
+    font-size: 30px;
+}
+
+div.exit {
+    margin-top: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    font-family: njnastrike;
+    margin-left: 30%;
+}
+
+/* media queries */
+@media screen and (max-width: 606px) {
+    div.exit {
+        margin: auto;
+        position: relative;
+    }
+    div.App {
+        height: 100%;
+    }
+
 }

@@ -29,7 +29,7 @@ class StartMenu extends React.Component {
     const createButtons = Object.keys(this.props.gradients).map ( (key) => {
       //console.log(this.props.gradients[key])
       let backgroundVal = {
-        background: this.props.gradients[key]
+        background: this.props.gradients[key],
       };
       //console.log(<li key= {value} className='colorbutton' onClick={this.handleColorOnClick}><button value={ value } style={ backgroundVal }  className= 'buttonstyle' ></button></li>) 
       return (
@@ -48,31 +48,34 @@ class StartMenu extends React.Component {
 
     return (
       <>
-        <div className='colorbar'>
-          <div>
-            <ul className='colorlist'>
-              { this.renderButtons() }
-            </ul>
-          </div>
-         
-          <div>
-            <h1>Spelling Masta</h1>
+        
+        <ul className='colorlist'>
+          { this.renderButtons() }
+        </ul>
+        
+        <div className='mainMenu'>
+
+          <div className='titleWord'>
+            <div  className='ghost'></div>
+            <div className='title'>
+              <h1>Spelling Masta</h1>
+            </div>  
+            <div className='ghost2'>
+              <div className='wordofday'>
+                <Link to= '/wordofday' className='noUnderline DayWord' ><h3 className='DayWord'>word•of•the•day</h3></Link>
+              </div> 
+            </div>
           </div>
           
-          <div>
-            <Link to= '/wordofday' className='noUnderline' ><h3 className='DayWord'>Word Of The Day</h3></Link>
-          </div>
-      
+          <ul id="difficultyList">
+            <li onClick={this.handleDifficultyClick} className={difficulty === "Newbie" ? "active" : ""}>Newbie</li>
+            <li onClick={this.handleDifficultyClick} className={difficulty === "Intermediate" ? "active" : ""}>Intermediate</li>
+            <li onClick={this.handleDifficultyClick} className={difficulty === "Nightmare" ? "active" : ""}>Nightmare</li>
+          </ul>
+          <Link to={{ pathname: '/board', state: { difficulty: difficulty.toLowerCase(), seconds: seconds } }}><button className="startButton">Start</button></Link>
+          {leaderboard.length > 0 && <Leaderboard leaderboard={leaderboard}/>}
         </div>
-        
-        <ul id="difficultyList">
-          <li onClick={this.handleDifficultyClick} className={difficulty === "Newbie" ? "active" : ""}>Newbie</li>
-          <li onClick={this.handleDifficultyClick} className={difficulty === "Intermediate" ? "active" : ""}>Intermediate</li>
-          <li onClick={this.handleDifficultyClick} className={difficulty === "Nightmare" ? "active" : ""}>Nightmare</li>
-        </ul>
-        <Link to={{ pathname: '/board', state: { difficulty: difficulty.toLowerCase(), seconds: seconds } }}><button className="startButton">Start</button></Link>
-        {leaderboard.length > 0 && <Leaderboard leaderboard={leaderboard}/>}
-        
+       
       </>
     );
   }

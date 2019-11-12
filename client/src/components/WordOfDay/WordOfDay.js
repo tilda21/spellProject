@@ -46,8 +46,8 @@ class WordOfDay extends React.Component {
                 <div>
                     <h1 className="word">{this.state.word}</h1>
                     <h2 className="text">{this.state.text}</h2>
-                    <h2 className="origin">Origin of the word:</h2>
-                    <h2 className="originText">{this.state.note}</h2>
+                    <h2 className="origin"><i>Origin of the word:</i></h2>
+                    <h2 className="originText"><i>{this.state.note}</i></h2>
                 </div>
                 <h3 className="date"> {this.state.date} </h3> 
                 <div className="exit">
