@@ -71,7 +71,7 @@ class Leaderboard extends React.Component {
             </tbody>
           </table>
         </div>
-        <div style={{height:"30px"}}></div>
+        <div style={{height:"10px"}}></div>
       </>
 
     )

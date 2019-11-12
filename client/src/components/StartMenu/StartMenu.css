@@ -1,3 +1,7 @@
+div.App {
+  height: 100%;
+}
+
 #difficultyList {
   display: flex;
   justify-content: center;
@@ -9,7 +13,8 @@
   list-style-type: none;
   padding: 0 20px 20px 20px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+
 }
 
 #difficultyList li:hover {
@@ -17,7 +22,8 @@
 }
 
 .active {
-  color: rgb(224, 60, 19);
+  color: rgb(94, 26, 9);
+  text-shadow: 2px 2px whitesmoke;
 }
 
 .startButton {
@@ -30,9 +36,11 @@
   -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);  
   font-weight: bold;
-  font-size: 20px;
-  margin: 20px 20px 30px 20px;
+  font-size: 30px;
+  margin: 0px 20px 10px 20px;
   width: 25%;
+  color: antiquewhite;
+  text-shadow: 2px 2px grey;
 }
 
 .startButton:hover {
@@ -50,7 +58,8 @@
   .startButton {
     padding: 5px;
     font-size: 18px;
-    margin: 10px 10px 20px 10px;
+    margin: 10px auto 20px auto;
     width: 25%;
+    text-align: center;
   }
 }
