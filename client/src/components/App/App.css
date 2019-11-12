@@ -1,12 +1,12 @@
 body {
-  height: 100vh;
+  height: 100%;
   /* background: rgb(175,66,8); */
   background: linear-gradient(0deg, rgba(175,66,8,0.8498787183440133) 28%, rgba(226,156,37,1) 64%, rgba(60,114,30,0.5296539992428897) 98%);
 }
 
 .App {
   text-align: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .backcolor {
@@ -32,6 +32,7 @@ div.colorbar {
   text-align: center;
 /*   background: #414345;
  */}
+
 ul.colorlist {
   margin: auto;
   display: flex;

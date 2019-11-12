@@ -49,11 +49,22 @@ class StartMenu extends React.Component {
     return (
       <>
         <div className='colorbar'>
-          <ul className='colorlist'>
-            { this.renderButtons() }
-          </ul>
+          <div>
+            <ul className='colorlist'>
+              { this.renderButtons() }
+            </ul>
+          </div>
+         
+          <div>
+            <h1>Spelling Masta</h1>
+          </div>
+          
+          <div>
+            <Link to= '/wordofday' className='noUnderline' ><h3 className='DayWord'>Word Of The Day</h3></Link>
+          </div>
+      
         </div>
-        <h1>Spelling Masta</h1>
+        
         <ul id="difficultyList">
           <li onClick={this.handleDifficultyClick} className={difficulty === "Newbie" ? "active" : ""}>Newbie</li>
           <li onClick={this.handleDifficultyClick} className={difficulty === "Intermediate" ? "active" : ""}>Intermediate</li>
@@ -61,9 +72,7 @@ class StartMenu extends React.Component {
         </ul>
         <Link to={{ pathname: '/board', state: { difficulty: difficulty.toLowerCase(), seconds: seconds } }}><button className="startButton">Start</button></Link>
         {leaderboard.length > 0 && <Leaderboard leaderboard={leaderboard}/>}
-        <div>
-          <Link to= '/wordofday' className='noUnderline' ><h3 className='DayWord'>Word Of The Day</h3></Link>
-        </div>
+        
       </>
     );
   }
