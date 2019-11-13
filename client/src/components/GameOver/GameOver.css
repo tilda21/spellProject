@@ -69,5 +69,6 @@ table.table > tbody > tr > td {
   .playAgainButton {
     margin-top: 5vh;
     margin-bottom: 0;
+    width: auto;
   }
 }

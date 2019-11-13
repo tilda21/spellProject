@@ -20,18 +20,16 @@ class StartMenu extends React.Component {
   handleDifficultyClick = (e) => {
     this.props.handleDifficultyChange(e.target.innerHTML);
   };
+  
   handleColorOnClick = (e) => {
     this.props.handleClick(e.target.value);
-    //console.log(e.target)
   };
 
   renderButtons = () => {
     const createButtons = Object.keys(this.props.gradients).map ( (key) => {
-      //console.log(this.props.gradients[key])
       let backgroundVal = {
         background: this.props.gradients[key],
       };
-      //console.log(<li key= {value} className='colorbutton' onClick={this.handleColorOnClick}><button value={ value } style={ backgroundVal }  className= 'buttonstyle' ></button></li>) 
       return (
           <li key={key} className='colorbutton' onClick={this.handleColorOnClick}>
             <button value={this.props.gradients[key]} style={backgroundVal}  className= 'buttonstyle'></button>

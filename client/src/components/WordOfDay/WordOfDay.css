@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-.title {
+.titleWOD {
     font-size: 35px;
     color: rgb(65, 65, 65);
     padding: 10px auto 0 auto;
@@ -50,17 +50,24 @@ h3.date {
 
 #exit button {
     margin: 0;
+    margin-right: 30px;
 }
 
 /* media queries */
-@media screen and (max-width: 606px) {
-    .title {
-        font-size: 20px;
+@media screen and (max-width: 790px) {
+    .wordOfDayContainer {
+        width: 95vw;
+        margin: 0 auto;
     }
 
-    .wordOfDayContainer {
-        width: 100vw;
-        margin: 0 auto;
+    #exit button {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .titleWOD {
+        font-size: 20px;
     }
     
     h1.word {
@@ -82,9 +89,5 @@ h3.date {
     
     h3.date {
         font-size: 18px;
-    }
-
-    #exit button {
-        margin-right: 20px;
     }
 }
