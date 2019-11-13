@@ -42,7 +42,7 @@ class WordOfDay extends React.Component {
         return (
             <div className="wordOfDayContainer">
                 <h1>Spelling Masta</h1>
-                <h2 className="title">And the word of the day is:</h2>
+                <h2 className="titleWOD">And the word of the day is:</h2>
                 {/* <GetWordOfDay date = {date}/> */}
                 <div>
                     <h1 className="word">{this.state.word}</h1>
