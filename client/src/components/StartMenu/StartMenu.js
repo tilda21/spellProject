@@ -33,8 +33,8 @@ class StartMenu extends React.Component {
       };
       //console.log(<li key= {value} className='colorbutton' onClick={this.handleColorOnClick}><button value={ value } style={ backgroundVal }  className= 'buttonstyle' ></button></li>) 
       return (
-          <li key= {key} className='colorbutton' onClick={this.handleColorOnClick}>
-            <button value={ this.props.gradients[key] } style={ backgroundVal }  className= 'buttonstyle' >{ key }</button>
+          <li key={key} className='colorbutton' onClick={this.handleColorOnClick}>
+            <button value={this.props.gradients[key]} style={backgroundVal}  className= 'buttonstyle'></button>
           </li>
       );
     })
@@ -50,7 +50,7 @@ class StartMenu extends React.Component {
       <>
         
         <ul className='colorlist'>
-          { this.renderButtons() }
+          {this.renderButtons()}
         </ul>
         
         <div className='mainMenu'>
@@ -61,9 +61,9 @@ class StartMenu extends React.Component {
               <h1>Spelling Masta</h1>
             </div>  
             <div className='ghost2'>
-              <div className='wordofday'>
+              {/* <div className='wordofday'> */}
                 <Link to= '/wordofday' className='noUnderline DayWord' ><h3 className='DayWord'>word•of•the•day</h3></Link>
-              </div> 
+              {/* </div>  */}
             </div>
           </div>
           

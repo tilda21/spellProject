@@ -25,6 +25,7 @@ const getAudioAlternative = async (word) => {
     if (!response[0].hwi || !response[0].hwi.prs || wordFromApi !== word) {
       return undefined;
     }
+    console.log(word);
     const audioStr = response[0].hwi.prs[0].sound.audio;
     let folder;
     if (audioStr.substring(0, 3) === "bix") {
