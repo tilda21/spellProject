@@ -49,8 +49,7 @@ h3.date {
 }
 
 #exit button {
-    margin: 0;
-    margin-right: 30px;
+    margin: 0 30px 20px auto;
 }
 
 /* media queries */
