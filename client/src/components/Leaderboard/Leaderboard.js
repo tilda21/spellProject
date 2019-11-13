@@ -56,8 +56,8 @@ class Leaderboard extends React.Component {
   render() {
     return (
      <>
-        <div id="leaderTable" className="container mt-2 py-4 pl-5 pr-5">
-          <table className="table table-sm table-hover">
+        <div id="leaderTable" className="container mt-2 py-4 pl-5 pr-5 mt-4">
+          <table className="table table-sm">
             <thead>
               <tr><th colSpan="3"><h5>Leaderboard</h5></th></tr>
               <tr>

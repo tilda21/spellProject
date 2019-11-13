@@ -23,25 +23,25 @@ class App extends React.Component {
   handleDifficultyChange = (difficulty) => {
     this.setState({ difficulty: difficulty });
   };
+
   handleClick = (bgColor) => {
-    //console.log('handleClick was called')
 		this.setState({
 			bgColor: bgColor,
     })
-    //console.log(bgColor)
 	};
 
   render() {
     const { difficulty, leaderboard, bgColor } = this.state;
     
     const gradients = {
-      Rastafari: "linear-gradient(to right, #FF0000, #FFF200, #1E9600)",
-      //ShadesGrey: "linear-gradient(180deg, #2c3e50, #bdc3c7)",
+      Rastafari: "linear-gradient(0deg, rgba(175,66,8,0.8498787183440133) 28%, rgba(226,156,37,1) 64%, rgba(60,114,30,0.5296539992428897) 98%)",
+      // Rastafari: "linear-gradient(to right, #FF0000, #FFF200, #1E9600)",
+      // ShadesGrey: "linear-gradient(180deg, #2c3e50, #bdc3c7)",
       Christmas: "linear-gradient(45deg, #2f7336, #aa3a38)",
-      //Netflix: "linear-gradient(180deg, #8e0e00, #1f1c18)",
+      // Netflix: "linear-gradient(180deg, #8e0e00, #1f1c18)",
       Instagram: "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
-      //Midnight: "radial-gradient(circle at center, #232526, #414345, grey)",
-      Hypnotize: "repeating-radial-gradient(circle, #7DD279, #7DD279 5px, #7984D2 5px, #7984D2 10px)", 
+      // Midnight: "radial-gradient(circle at center, #232526, #414345, grey)",
+      // Hypnotize: "repeating-radial-gradient(circle, #7DD279, #7DD279 5px, #7984D2 5px, #7984D2 10px)", 
     }
 
     return (

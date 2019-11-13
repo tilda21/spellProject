@@ -40,8 +40,9 @@ class WordOfDay extends React.Component {
         
         
         return (
-            <>
-                <h1 className="title">And the word of the day is:</h1>
+            <div className="wordOfDayContainer">
+                <h1>Spelling Masta</h1>
+                <h2 className="title">And the word of the day is:</h2>
                 {/* <GetWordOfDay date = {date}/> */}
                 <div>
                     <h1 className="word">{this.state.word}</h1>
@@ -50,10 +51,10 @@ class WordOfDay extends React.Component {
                     <h2 className="originText"><i>{this.state.note}</i></h2>
                 </div>
                 <h3 className="date"> {this.state.date} </h3> 
-                <div className="exit">
-                    <Link to="/"><button>HomePage</button></Link>
+                <div className="exit" id="exit">
+                    <Link to="/"><button>Back</button></Link>
                 </div>
-            </>
+            </div>
         )
         
     }

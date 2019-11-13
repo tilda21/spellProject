@@ -1,6 +1,7 @@
 #leaderTable {
   max-height: 57vh;
   overflow-y: scroll;
+  font-size: 17px;
 }
 
 /* Scroll bar */

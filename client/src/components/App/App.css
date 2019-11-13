@@ -2,42 +2,48 @@
   font-family: "Japonesa";
   src: url('../../fonts/Japonesa.ttf')  format("truetype");
 }
+
 @font-face {
   font-family: "njnaruto";
   src: url('../../fonts/njnaruto.ttf')  format("truetype");
 }
 
 body {
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Nanum Gothic', sans-serif; */
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+  /* color: white; */
   height: 100%;
-  /* background: rgb(175,66,8); */
-  background: linear-gradient(0deg, rgba(175,66,8,0.8498787183440133) 28%, rgba(226,156,37,1) 64%, rgba(60,114,30,0.5296539992428897) 98%);
+  background: linear-gradient(0deg, rgba(175, 66, 8, 0.8498787183440133) 28%, rgba(226, 156, 37, 1) 64%, rgba(60, 114, 30, 0.5296539992428897) 98%);
 }
 
 .App {
   text-align: center;
-  height: 100%;
-  color: white;
-  font-family: Japonesa;
-  text-shadow: 2px 2px grey;
+  min-height: 100vh;
+  /* color: white; */
+  /* font-family: Japonesa; */
+  /* text-shadow: 2px 2px grey; */
 }
 
 .backcolor {
-  background: linear-gradient(0deg, rgba(175,66,8,0.8498787183440133) 28%, rgba(226,156,37,1) 64%, rgba(60,114,30,0.5296539992428897) 98%);
+  background: linear-gradient(0deg, rgba(175, 66, 8, 0.8498787183440133) 28%, rgba(226, 156, 37, 1) 64%, rgba(60, 114, 30, 0.5296539992428897) 98%);
 }
 
 button.buttonstyle {
   border-radius: 5px;
-  /*padding: 20px 52px 20px 52px;
- */padding: 20px;
-  border: whitesmoke;
-  color: none;
+  padding: 20px;
   font-size: 10px;
   margin: auto;
   position: relative;
+  border: solid 1px rgb(173, 173, 173);
+  outline: none;
+  width: 80px;
 }
-button.buttonstyle:hover {
+
+/* button.buttonstyle:hover {
   color: white;
-}
+} */
 
 h1 {
   color: black;
@@ -51,8 +57,9 @@ ul.colorlist {
   width: 5%;
   position: fixed;
   height: 100%;
-  display: block; 
+  padding: 10px;
 }
+
 li.colorbutton {
   list-style-type: none;
   transform: rotate(90deg);
@@ -61,10 +68,6 @@ li.colorbutton {
   margin: 0px;
 }
 
-div.mainMenu {
-  height: 100%;
-} 
-
 div.titleWord {
   display: flex;
 }
@@ -72,57 +75,85 @@ div.titleWord {
 div.ghost {
   width: 25%;
 }
+
 div.title {
   text-align: center;
   width: 50%;
+  padding-top: 0!important;
 }
+
 div.ghost2 {
   width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-div.wordofday {
+
+/* div.wordofday {
   text-align: center;
   margin: 0;
   height: 100px;
-  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
-  transition: width 1s, height 1s, transform 1s;
-}
-div.wordofday:hover {
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+  /* Safari */
+  /* transition: width 1s, height 1s, transform 1s;
+} */
+
+/* div.wordofday:hover {
   height: 100px;
-  -webkit-transform: rotate(180deg); /* Safari */
-  transform: rotate(180deg);
-}
+  -webkit-transform: rotate(180deg);
+  /* Safari */
+  /* transform: rotate(180deg); */
+/* }  */
+
 a.DayWord {
   color: black;
 }
-h3.DayWord {
-  font-size: 30px;
-  text-align: center;
-  height: 100%;
+
+a.DayWord:hover {
+  color: rgb(192, 59, 59);
+  text-decoration: none;
 }
 
+h3.DayWord {
+  font-size: 28px;
+  text-align: center;
+  height: 100%;
+  margin: 0!important;
+}
+
+/* media queries */
 @media screen and (max-width: 606px) {
   div.App {
-    height: 100%;
+    min-height: 100vh;
   }
+
   div.titleWord {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
-  div.ghost2 {
+
+  h3.DayWord {
+    font-size: 25px;
+  }
+
+  div.ghost {
     display: none;
   }
+
   div.title {
     display: flex;
-    text-align: center;
+    justify-content: center;
     width: 100%;
   }
+
   div.ghost2 {
     display: flex;
     width: 100%;
     height: 40px;
-    margin: auto;
-    
+    margin-top: -10px;
+
   }
+
   div.wordofday {
     text-align: center;
     margin: auto;
@@ -132,18 +163,33 @@ h3.DayWord {
     -webkit-transition: none;
     transition: none;
   }
+
   div.wordofday:hover {
-    -webkit-transform: none; /* Safari */
+    -webkit-transform: none;
+    /* Safari */
     transform: none;
   }
 
-  li.colorbutton {
+  /* li.colorbutton {
     height: 25px;
-  }
+  } */
+
   button.buttonstyle {
     border-radius: 5px;
-    /*padding: 20px 52px 20px 52px;
-   */padding: 20px;
-    font-size: 0px;
+    padding: 20px;
+    width: 80px;
+  }
+
+  ul.colorlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+  }
+
+  li.colorbutton {
+    padding: 5px;
+    margin: 8px;
   }
 }
