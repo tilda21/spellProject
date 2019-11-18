@@ -4,6 +4,19 @@
   font-size: 17px;
 }
 
+#difficulty {
+  padding-left: 2px;
+}
+
+#points {
+  padding-left: 2px;
+}
+
+#leaderboardTitle {
+  margin: 0!important;
+  padding: 5px;
+}
+
 /* Scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
