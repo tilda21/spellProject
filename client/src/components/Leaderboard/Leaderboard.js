@@ -49,8 +49,12 @@ class Leaderboard extends React.Component {
       }
     })
     // change the arrow direction on both siblings
+    if (e.target.src === downArrow && sibling.src === upArrow) {
+      e.target.src = downArrow;
+    } else {
+      e.target.src = e.target.src === upArrow ? downArrow : upArrow;
+    }
     sibling.src = downArrow;
-    e.target.src = e.target.src === upArrow ? downArrow : upArrow;
   }
 
   render() {
@@ -59,7 +63,7 @@ class Leaderboard extends React.Component {
         <div id="leaderTable" className="container mt-2 py-4 pl-5 pr-5 mt-4">
           <table className="table table-sm">
             <thead>
-              <tr><th colSpan="3"><h5>Leaderboard</h5></th></tr>
+              <tr><th colSpan="3"><h5 id="leaderboardTitle">Leaderboard</h5></th></tr>
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Difficulty<img id="difficulty" onClick={this.sortBy} src={downArrow} alt=""/></th>
