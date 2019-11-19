@@ -35,7 +35,7 @@ h2.text {
 
 .originText {
     font-size: 28px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
 }
 
 h3.date {
@@ -89,4 +89,12 @@ h3.date {
     h3.date {
         font-size: 18px;
     }
+}
+
+@media screen and (max-width: 350px) {
+    .wordOfDayContainer {
+        width: 100%;
+        margin: 0;
+    }
+
 }
