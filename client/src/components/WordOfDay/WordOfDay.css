@@ -24,7 +24,7 @@ h1.word {
 h2.text {
     font-size: 28px;
     padding: 0px 10px;
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
 .origin {
@@ -45,7 +45,7 @@ h3.date {
 
 #exit {
    width: 100%;
-   margin: 80px 0 0 auto;
+   margin: 20px 0 0 auto;
 }
 
 #exit button {
