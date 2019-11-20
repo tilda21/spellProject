@@ -14,11 +14,11 @@
 }
 
 #difficultyList li:hover {
-  color: rgb(192, 59, 59);
+  color: rgb(94, 26, 9);
 }
 
 .active {
-  color: rgb(94, 26, 9);
+  color: rgb(192, 59, 59);
   /* text-shadow: 2px 2px whitesmoke; */
 }
 
