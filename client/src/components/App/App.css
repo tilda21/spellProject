@@ -6,7 +6,6 @@ body {
   /* color: white; */
   color: black;
   height: 100%;
-  background: linear-gradient(0deg, rgba(175, 66, 8, 0.8498787183440133) 28%, rgba(226, 156, 37, 1) 64%, rgba(60, 114, 30, 0.5296539992428897) 98%);
 }
 
 button {
